@@ -42,7 +42,6 @@ public class ProductService {
     public ProductDTO updateProduct(long productId, ProductDTO productDTO) {
         Product existingProduct = getProductOrThrow(productId);
 
-        // Update the existing product with the new data
         existingProduct.setName(productDTO.getName());
         existingProduct.setPrice(productDTO.getPrice());
         existingProduct.setDescription(productDTO.getDescription());

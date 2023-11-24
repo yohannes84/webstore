@@ -34,7 +34,7 @@ public class OrderServiceImpl implements OrderService {
     public Order updateOrderStatus(String orderId, OrderStatus newStatus) {
         return orderRepository.findById(orderId)
                 .map(order -> {
-                    order.setStatus(newStatus);
+                    order.setTypeOrder(newStatus);
                     return orderRepository.save(order);
                 })
                 .orElseThrow(() -> new OrderNotFoundException("Order not found with id: " + orderId));
@@ -49,6 +49,5 @@ public class OrderServiceImpl implements OrderService {
         return orderRepository.findById(id)
                 .orElseThrow(() -> new OrderNotFoundException("Order not found with id: " + id));
     }
-
 
 }

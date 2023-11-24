@@ -142,7 +142,7 @@ public class OrderControllerTest {
                 .customerInfo(customer)
                 .paymentInfo(payment)
                 .orderItems(Collections.emptyList())
-                .status(OrderStatus.PLACED)
+                .typeOrder("PLACED")
                 .build();
 
         // Create an updated order with DELIVERED status
@@ -151,7 +151,7 @@ public class OrderControllerTest {
                 .customerInfo(customer)
                 .paymentInfo(payment)
                 .orderItems(Collections.emptyList())
-                .status(OrderStatus.DELIVERED)
+                .typeOrder("DELIVERED")
                 .build();
 
         // Add the initial order to be fetched
@@ -176,7 +176,7 @@ public class OrderControllerTest {
                 .contentType(ContentType.JSON)
                 .and()
                 .body("id", equalTo("56473T45"))
-                .body("status", equalTo("DELIVERED")); // Assuming your status is represented as a string in JSON
+                .body("typeOrder", equalTo("DELIVERED")); // Assuming your status is represented as a string in JSON
 
         // Cleanup
         given()
