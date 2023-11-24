@@ -22,12 +22,20 @@ public class PmsApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		Product product1 =
-				new Product(85465, "IPhone", 12.5, "", 20, new ArrayList<>() );
-		Product product2 =
-				new Product(52532536, "Samsung", 32.5, "", 30, new ArrayList<>() );
-		Product product3 =
-				new Product(4596553, "Nokia", 50.7, "", 10, new ArrayList<>() );
-		repository.save(product1);   repository.save(product2);  repository.save(product3);
-	}
+				new Product(85465, "IPhone", 120.5, "IPhone I7 Newest Gen",
+						20, new ArrayList<>() );
 
+		Product product2 =
+				new Product(52532536, "Samsung", 180.5, "S6 Gu Model ",
+						30, new ArrayList<>() );
+
+		Product product3 =
+				new Product(4596553, "Nokia", 50.7, "N Latest release",
+						10, new ArrayList<>() );
+
+		repository.save(product1);
+		repository.save(product2);
+		repository.save(product3);
+
+	}
 }

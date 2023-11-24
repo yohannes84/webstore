@@ -15,7 +15,6 @@ import java.util.List;
 @AllArgsConstructor
 public class ProductDTO {
 
-
     private long productNumber;
     private String name;
     private Double price;
