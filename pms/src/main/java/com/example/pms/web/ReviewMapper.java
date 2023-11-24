@@ -11,13 +11,6 @@ public class ReviewMapper {
                 .rating(review.getRating())
                 .comment(review.getComment())
                 .build();
-
-//        ReviewDTO reviewDTO = new ReviewDTO();
-//        reviewDTO.setName(review.getName());
-//        reviewDTO.setRating(review.getRating());
-//        reviewDTO.setComment(review.getComment());
-//        reviewDTO.setReviewDate(review.getReviewDate());
-//        return reviewDTO;
     }
 
     public static Review getReview(ReviewDTO reviewDTO) {
@@ -26,12 +19,5 @@ public class ReviewMapper {
                 .rating(reviewDTO.getRating())
                 .comment(reviewDTO.getComment())
                 .build();
-
-//        Review review = new Review();
-//        review.setName(reviewDTO.getName());
-//        review.setRating(reviewDTO.getRating());
-//        review.setComment(reviewDTO.getComment());
-//        review.setReviewDate(reviewDTO.getReviewDate());
-//        return review;
     }
 }
