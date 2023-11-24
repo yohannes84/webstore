@@ -25,14 +25,6 @@ public class ProductMapper {
                                 .build()).collect(Collectors.toList()))
                 .build();
 
-//        return new Product(
-//                productDTO.getProductNumber(),
-//                productDTO.getName(),
-//                productDTO.getPrice(),
-//                productDTO.getDescription(),
-//                productDTO.getNumInStock(),
-//                mapReviewDTOListToReviewList(productDTO.getReviews())
-//        );
     }
 
     public static ProductDTO getProductDTO(Product product){
@@ -53,14 +45,6 @@ public class ProductMapper {
 
                 .build();
 
-//        return new ProductDTO(
-//                product.getProductNumber(),
-//                product.getName(),
-//                product.getPrice(),
-//                product.getDescription(),
-//                product.getNumInStock(),
-//                mapReviewListToReviewDTOList(product.getReviews())
-//        );
     }
 
     private static List<Review> mapReviewDTOListToReviewList(List<ReviewDTO> reviewDTOList) {
